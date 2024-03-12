@@ -1,0 +1,72 @@
+{
+  "rules": {
+    "unicorn/better-regex": ["error", { "sortCharacterClasses": true }],
+    "unicorn/catch-error-name": ["error", { "name": "error" }],
+    "unicorn/consistent-function-scoping": [
+      "error",
+      { "checkArrowFunctions": true }
+    ],
+    "unicorn/expiring-todo-comments": [
+      "error",
+      { "allowWarningComments": false, "ignoreDatesOnPullRequests": false }
+    ],
+    "unicorn/explicit-length-check": ["error", { "non-zero": "greater-than" }],
+    "unicorn/filename-case": ["error", { "case": "kebabCase" }],
+    "unicorn/import-style": [
+      "error",
+      {
+        "checkDynamicImport": true,
+        "checkExportFrom": true,
+        "checkImport": true,
+        "checkRequire": true,
+        "extendDefaultStyles": true
+      }
+    ],
+    "unicorn/no-array-push-push": "error",
+    "unicorn/no-array-reduce": ["error", { "allowSimpleOperations": false }],
+    "unicorn/no-keyword-prefix": [
+      "error",
+      { "checkProperties": true, "onlyCamelCase": false }
+    ],
+    "unicorn/no-null": ["error", { "checkStrictEquality": true }],
+    "unicorn/no-typeof-undefined": ["error", { "checkGlobalVariables": true }],
+    "unicorn/no-unnecessary-polyfills": "error",
+    "unicorn/no-useless-undefined": [
+      "error",
+      { "checkArguments": true, "checkArrowFunctionBody": true }
+    ],
+    "unicorn/numeric-separators-style": [
+      "error",
+      { "onlyIfContainsSeparator": false }
+    ],
+    "unicorn/prefer-add-event-listener": "error",
+    "unicorn/prefer-array-find": ["error", { "checkFromLast": false }],
+    "unicorn/prefer-array-flat": "error",
+    "unicorn/prefer-at": ["error", { "checkAllIndexAccess": true }],
+    "unicorn/prefer-export-from": ["error", { "ignoreUsedVariables": false }],
+    "unicorn/prefer-number-properties": ["error", { "checkInfinity": true }],
+    "unicorn/prefer-object-from-entries": "error",
+    "unicorn/prefer-switch": [
+      "error",
+      { "emptyDefaultCase": "no-default-case", "minimumCases": 4 }
+    ],
+    "unicorn/prefer-ternary": ["error", "always"],
+    "unicorn/prevent-abbreviations": [
+      "error",
+      {
+        "checkDefaultAndNamespaceImports": "internal",
+        "checkFilenames": true,
+        "checkProperties": true,
+        "checkShorthandImports": "internal",
+        "checkShorthandProperties": true,
+        "checkVariables": true,
+        "extendDefaultAllowList": true,
+        "extendDefaultReplacements": true
+      }
+    ],
+    "unicorn/relative-url-style": ["error", "never"],
+    "unicorn/string-content": "off",
+    "unicorn/switch-case-braces": ["error", "always"],
+    "unicorn/template-indent": "error"
+  }
+}

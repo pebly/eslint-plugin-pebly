@@ -1,0 +1,13 @@
+{
+  "rules": {
+    "wc/file-name-matches-element": ["error", { "transform": "kebab" }],
+    "wc/max-elements-per-file": ["error", { "max": 1 }],
+    "wc/no-invalid-element-name": [
+      "error",
+      { "disallowNamespaces": true, "onlyAlphanum": false }
+    ],
+    "wc/no-invalid-extends": "error",
+    "wc/require-listener-teardown": "error",
+    "wc/tag-name-matches-class": "error"
+  }
+}

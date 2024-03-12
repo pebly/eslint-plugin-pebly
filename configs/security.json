@@ -1,0 +1,6 @@
+{
+  "rules": {
+    "security/detect-disable-mustache-escape": "off",
+    "security/detect-no-csrf-before-method-override": "off"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "rules": {
+    "n/callback-return": "error",
+    "n/exports-style": [
+      "error",
+      "module.exports",
+      { "allowBatchAssign": false }
+    ],
+    "n/file-extension-in-import": ["error", "always"],
+    "n/handle-callback-err": "off",
+    "n/no-deprecated-api": ["error", { "ignoreIndirectDependencies": false }],
+    "n/no-extraneous-import": "error",
+    "n/no-extraneous-require": "error",
+    "n/no-missing-import": "error",
+    "n/no-missing-require": "error",
+    "n/no-mixed-requires": ["error", { "allowCall": false, "grouping": false }],
+    "n/no-restricted-import": "off",
+    "n/no-restricted-require": "off",
+    "n/no-sync": ["error", { "allowAtRootLevel": false }],
+    "n/no-unpublished-bin": "error",
+    "n/no-unpublished-import": ["error", { "ignoreTypeImport": false }],
+    "n/no-unpublished-require": "error",
+    "n/no-unsupported-features/es-builtins": "error",
+    "n/no-unsupported-features/es-syntax": "error",
+    "n/no-unsupported-features/node-builtins": "error",
+    "n/prefer-global/buffer": ["error", "always"],
+    "n/prefer-global/console": ["error", "always"],
+    "n/prefer-global/process": ["error", "always"],
+    "n/prefer-global/text-decoder": ["error", "always"],
+    "n/prefer-global/text-encoder": ["error", "always"],
+    "n/prefer-global/url-search-params": ["error", "always"],
+    "n/prefer-global/url": ["error", "always"],
+    "n/shebang": "error"
+  }
+}
