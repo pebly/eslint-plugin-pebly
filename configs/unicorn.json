@@ -11,12 +11,17 @@
       { "allowWarningComments": false, "ignoreDatesOnPullRequests": false }
     ],
     "unicorn/explicit-length-check": ["error", { "non-zero": "greater-than" }],
-    "unicorn/filename-case": ["error", { "case": "kebabCase" }],
+    "unicorn/filename-case": [
+      "error",
+      {
+        "cases": { "camelCase": true, "kebabCase": true, "pascalCase": true }
+      }
+    ],
     "unicorn/import-style": [
       "error",
       {
         "checkDynamicImport": true,
-        "checkExportFrom": true,
+        "checkExportFrom": false,
         "checkImport": true,
         "checkRequire": true,
         "extendDefaultStyles": true
@@ -54,14 +59,21 @@
     "unicorn/prevent-abbreviations": [
       "error",
       {
+        "allowList": {
+          "args": true,
+          "fn": true
+        },
         "checkDefaultAndNamespaceImports": "internal",
-        "checkFilenames": true,
+        "checkFilenames": false,
+        "checkVariables": true,
         "checkProperties": true,
         "checkShorthandImports": "internal",
         "checkShorthandProperties": true,
-        "checkVariables": true,
         "extendDefaultAllowList": true,
-        "extendDefaultReplacements": true
+        "extendDefaultReplacements": true,
+        "replacements": {
+          "func": { "fn": true }
+        }
       }
     ],
     "unicorn/relative-url-style": ["error", "never"],

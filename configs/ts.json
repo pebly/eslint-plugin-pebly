@@ -153,7 +153,7 @@
     ],
     "@typescript-eslint/prefer-literal-enum-member": [
       "error",
-      { "allowBitwiseExpressions": true }
+      { "allowBitwiseExpressions": false }
     ],
     "@typescript-eslint/prefer-nullish-coalescing": [
       "error",
@@ -245,11 +245,11 @@
         "allowNullableBoolean": false,
         "allowNullableEnum": false,
         "allowNullableNumber": false,
-        "allowNullableObject": true,
+        "allowNullableObject": false,
         "allowNullableString": false,
-        "allowNumber": true,
+        "allowNumber": false,
         "allowRuleToRunWithoutStrictNullChecksIKnowWhatIAmDoing": false,
-        "allowString": true
+        "allowString": false
       }
     ],
     "@typescript-eslint/switch-exhaustiveness-check": [

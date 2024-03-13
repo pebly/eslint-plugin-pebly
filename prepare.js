@@ -17,8 +17,6 @@ const config = (name, path, plugin) => {
   const pluginRules =
     plugin === 'eslint' ? Object.fromEntries(pluginMod) : pluginMod.rules;
 
-  let rules = {};
-
   for (const ns in configRules) {
     const key = Object.keys(pluginRules).find(
       (key) => configNs(plugin, key) === ns
@@ -28,6 +26,8 @@ const config = (name, path, plugin) => {
       throw new Error(`unknown rule: ${ns}`);
     }
   }
+
+  let rules = {};
 
   for (const key in pluginRules) {
     const ns = configNs(plugin, key);
@@ -54,7 +54,7 @@ const config = (name, path, plugin) => {
       }
 
       if (ext) {
-        throw new Error(`forbidden core rule: ${ns} <-> ${ext}`);
+        throw new Error(`core rule: ${ns} <-> ${ext}`);
       }
 
       if (ruleConfig !== 'off' && !schema) {

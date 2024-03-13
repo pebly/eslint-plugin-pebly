@@ -132,7 +132,7 @@
     "vue/no-reserved-component-names": [
       "error",
       {
-        "disallowVue3BuiltInComponents": false,
+        "disallowVue3BuiltInComponents": true,
         "disallowVueBuiltInComponents": false
       }
     ],
@@ -155,7 +155,7 @@
       "error",
       { "allowReferrer": false, "enforceDynamicLinks": "never" }
     ],
-    "vue/no-undef-components": "error",
+    "vue/no-undef-components": "off",
     "vue/no-undef-properties": "error",
     "vue/no-unsupported-features": "error",
     "vue/no-unused-components": [
@@ -194,7 +194,7 @@
       "error",
       {
         "betweenOptions": "always",
-        "groupSingleLineProperties": true,
+        "groupSingleLineProperties": false,
         "withinOption": "always"
       }
     ],
@@ -218,7 +218,7 @@
     "vue/require-prop-comment": "off",
     "vue/return-in-computed-property": [
       "error",
-      { "treatUndefinedAsUnspecified": true }
+      { "treatUndefinedAsUnspecified": false }
     ],
     "vue/script-indent": ["error", 2, { "baseIndent": 0, "switchCase": 1 }],
     "vue/singleline-html-element-content-newline": [

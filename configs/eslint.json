@@ -1,4 +1,27 @@
 {
+  "overrides": [
+    {
+      "files": "*.{ts,vue}",
+      "rules": {
+        "constructor-super": "off",
+        "getter-return": "off",
+        "no-const-assign": "off",
+        "no-dupe-args": "off",
+        "no-dupe-class-members": "off",
+        "no-dupe-keys": "off",
+        "no-func-assign": "off",
+        "no-import-assign": "off",
+        "no-new-symbol": "off",
+        "no-obj-calls": "off",
+        "no-redeclare": "off",
+        "no-setter-return": "off",
+        "no-this-before-super": "off",
+        "no-undef": "off",
+        "no-unreachable": "off",
+        "no-unsafe-negation": "off"
+      }
+    }
+  ],
   "rules": {
     "accessor-pairs": [
       "error",
@@ -44,13 +67,13 @@
       }
     ],
     "func-names": ["error", "never", { "generators": "never" }],
-    "func-style": ["error", "expression", { "allowArrowFunctions": true }],
+    "func-style": ["error", "expression"],
     "getter-return": ["error", { "allowImplicit": true }],
     "grouped-accessor-pairs": ["error", "getBeforeSet"],
     "id-denylist": "off",
     "id-length": "off",
     "id-match": "off",
-    "init-declarations": ["error", "always"],
+    "init-declarations": "off",
     "line-comment-position": [
       "error",
       { "applyDefaultIgnorePatterns": true, "position": "above" }
@@ -69,7 +92,7 @@
     "max-lines-per-function": [
       "error",
       {
-        "IIFEs": false,
+        "IIFEs": true,
         "max": 64,
         "skipBlankLines": true,
         "skipComments": true
@@ -115,7 +138,6 @@
       "error",
       {
         "skipComments": false,
-        "skipJSXText": false,
         "skipRegExps": false,
         "skipStrings": false,
         "skipTemplates": false
@@ -124,7 +146,7 @@
     "no-labels": ["error", { "allowLoop": false, "allowSwitch": false }],
     "no-magic-numbers": "off",
     "no-multi-assign": ["error", { "ignoreNonDeclaration": false }],
-    "no-param-reassign": ["error", { "props": false }],
+    "no-param-reassign": ["error", { "props": true }],
     "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
     "no-promise-executor-return": ["error", { "allowVoid": false }],
     "no-redeclare": ["error", { "builtinGlobals": true }],
@@ -139,12 +161,14 @@
     "no-shadow": [
       "error",
       {
-        "builtinGlobals": false,
+        "builtinGlobals": true,
         "hoist": "all",
         "ignoreOnInitialization": false
       }
     ],
+    "no-ternary": "off",
     "no-undef": ["error", { "typeof": true }],
+    "no-undefined": "off",
     "no-underscore-dangle": [
       "error",
       {
@@ -258,6 +282,6 @@
       { "enforceForIndexOf": true, "enforceForSwitchCase": true }
     ],
     "valid-typeof": ["error", { "requireStringLiterals": true }],
-    "yoda": ["error", "always"]
+    "yoda": ["error", "never"]
   }
 }
