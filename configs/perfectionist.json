@@ -1,0 +1,20 @@
+{
+  "rules": {
+    "perfectionist/sort-array-includes": ["error", { "type": "natural" }],
+    "perfectionist/sort-astro-attributes": "off",
+    "perfectionist/sort-classes": ["error", { "type": "natural" }],
+    "perfectionist/sort-enums": ["error", { "type": "natural" }],
+    "perfectionist/sort-exports": ["error", { "type": "natural" }],
+    "perfectionist/sort-imports": ["error", { "type": "natural" }],
+    "perfectionist/sort-interfaces": ["error", { "type": "natural" }],
+    "perfectionist/sort-jsx-props": ["error", { "type": "natural" }],
+    "perfectionist/sort-maps": ["error", { "type": "natural" }],
+    "perfectionist/sort-named-exports": ["error", { "type": "natural" }],
+    "perfectionist/sort-named-imports": ["error", { "type": "natural" }],
+    "perfectionist/sort-object-types": ["error", { "type": "natural" }],
+    "perfectionist/sort-objects": ["error", { "type": "natural" }],
+    "perfectionist/sort-svelte-attributes": "off",
+    "perfectionist/sort-union-types": ["error", { "type": "natural" }],
+    "perfectionist/sort-vue-attributes": ["error", { "type": "natural" }]
+  }
+}

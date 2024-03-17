@@ -137,6 +137,14 @@ const configSchema = (plugin, schema) => {
     return JSON.parse(JSON.stringify(schema).replaceAll('#/items/0/', '#/'));
   }
 
+  if (plugin === 'eslint-plugin-perfectionist') {
+    return JSON.parse(
+      JSON.stringify(schema)
+        .replaceAll('"exclusiveMinimum"', '"_exclusiveMinimum"')
+        .replaceAll('"id"', '"_id"')
+    );
+  }
+
   return schema;
 };
 
@@ -177,6 +185,7 @@ fs.mkdirSync(`${__dirname}/dist`, { recursive: true });
 
 const configEslint = config('eslint', 'lib/rules', 'eslint');
 const configN = config('n', 'lib', 'eslint-plugin-n');
+const configPerfectionist = config('perfectionist', 'dist', 'eslint-plugin-perfectionist'); // prettier-ignore
 const configSecurity = config('security', '.', 'eslint-plugin-security');
 const configTs = config('ts', 'eslint-plugin/dist', '@typescript-eslint');
 const configUnicorn = config('unicorn', '.', 'eslint-plugin-unicorn');

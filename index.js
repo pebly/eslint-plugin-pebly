@@ -2,6 +2,7 @@ module.exports = {
   configs: {
     eslint: require('./dist/eslint.json'),
     n: require('./dist/n.json'),
+    perfectionist: require('./dist/perfectionist.json'),
     security: require('./dist/security.json'),
     ts: require('./dist/ts.json'),
     unicorn: require('./dist/unicorn.json'),
