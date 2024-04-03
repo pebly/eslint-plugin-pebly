@@ -7,7 +7,7 @@
       { "allowBatchAssign": false }
     ],
     "n/file-extension-in-import": ["error", "always"],
-    "n/handle-callback-err": "off",
+    "n/handle-callback-err": ["error", "error"],
     "n/no-deprecated-api": ["error", { "ignoreIndirectDependencies": false }],
     "n/no-extraneous-import": "error",
     "n/no-extraneous-require": "error",

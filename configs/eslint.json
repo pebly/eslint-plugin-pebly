@@ -1,27 +1,4 @@
 {
-  "overrides": [
-    {
-      "files": "*.{ts,vue}",
-      "rules": {
-        "constructor-super": "off",
-        "getter-return": "off",
-        "no-const-assign": "off",
-        "no-dupe-args": "off",
-        "no-dupe-class-members": "off",
-        "no-dupe-keys": "off",
-        "no-func-assign": "off",
-        "no-import-assign": "off",
-        "no-new-symbol": "off",
-        "no-obj-calls": "off",
-        "no-redeclare": "off",
-        "no-setter-return": "off",
-        "no-this-before-super": "off",
-        "no-undef": "off",
-        "no-unreachable": "off",
-        "no-unsafe-negation": "off"
-      }
-    }
-  ],
   "rules": {
     "accessor-pairs": [
       "error",
@@ -48,10 +25,13 @@
     "capitalized-comments": [
       "error",
       "never",
-      { "ignoreConsecutiveComments": false, "ignoreInlineComments": false }
+      {
+        "ignoreConsecutiveComments": false,
+        "ignoreInlineComments": false
+      }
     ],
     "class-methods-use-this": ["error", { "enforceForClassFields": true }],
-    "complexity": ["error", { "max": 16 }],
+    "complexity": ["error", { "max": 32 }],
     "consistent-return": ["error", { "treatUndefinedAsUnspecified": false }],
     "consistent-this": ["error", "that"],
     "curly": ["error", "all"],
@@ -73,34 +53,30 @@
     "id-denylist": "off",
     "id-length": "off",
     "id-match": "off",
-    "init-declarations": "off",
-    "line-comment-position": [
-      "error",
-      { "applyDefaultIgnorePatterns": true, "position": "above" }
-    ],
+    "init-declarations": ["error", "always"],
     "logical-assignment-operators": [
       "error",
       "always",
       { "enforceForIfStatements": true }
     ],
     "max-classes-per-file": ["error", { "ignoreExpressions": false, "max": 1 }],
-    "max-depth": ["error", { "max": 4 }],
+    "max-depth": ["error", { "max": 8 }],
     "max-lines": [
       "error",
-      { "max": 256, "skipBlankLines": true, "skipComments": true }
+      { "max": 512, "skipBlankLines": true, "skipComments": true }
     ],
     "max-lines-per-function": [
       "error",
       {
         "IIFEs": true,
-        "max": 64,
+        "max": 128,
         "skipBlankLines": true,
         "skipComments": true
       }
     ],
-    "max-nested-callbacks": ["error", { "max": 2 }],
-    "max-params": ["error", { "max": 4 }],
-    "max-statements": ["error", { "max": 16 }],
+    "max-nested-callbacks": ["error", { "max": 4 }],
+    "max-params": ["error", { "max": 8 }],
+    "max-statements": ["error", { "max": 32 }],
     "multiline-comment-style": ["error", "starred-block"],
     "new-cap": [
       "error",
@@ -146,7 +122,7 @@
     "no-labels": ["error", { "allowLoop": false, "allowSwitch": false }],
     "no-magic-numbers": "off",
     "no-multi-assign": ["error", { "ignoreNonDeclaration": false }],
-    "no-param-reassign": ["error", { "props": true }],
+    "no-param-reassign": ["error", { "props": false }],
     "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
     "no-promise-executor-return": ["error", { "allowVoid": false }],
     "no-redeclare": ["error", { "builtinGlobals": true }],
@@ -168,7 +144,6 @@
     ],
     "no-ternary": "off",
     "no-undef": ["error", { "typeof": true }],
-    "no-undefined": "off",
     "no-underscore-dangle": [
       "error",
       {
@@ -246,11 +221,8 @@
       "error",
       { "destructuring": "all", "ignoreReadBeforeAssign": false }
     ],
-    "prefer-destructuring": [
-      "error",
-      { "array": true, "object": true },
-      { "enforceForRenamedProperties": true }
-    ],
+    "prefer-destructuring": "off",
+    "prefer-named-capture-group": "off",
     "prefer-promise-reject-errors": ["error", { "allowEmptyReject": false }],
     "prefer-regex-literals": ["error", { "disallowRedundantWrapping": true }],
     "radix": ["error", "always"],

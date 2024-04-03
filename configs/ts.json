@@ -1,4 +1,14 @@
 {
+  "overrides": [
+    {
+      "extends": "plugin:@typescript-eslint/eslint-recommended",
+      "files": "*"
+    },
+    {
+      "extends": "plugin:@typescript-eslint/disable-type-checked",
+      "files": "*.vue"
+    }
+  ],
   "rules": {
     "@typescript-eslint/array-type": [
       "error",
@@ -71,7 +81,14 @@
       { "default": { "order": "natural" } }
     ],
     "@typescript-eslint/method-signature-style": ["error", "property"],
-    "@typescript-eslint/naming-convention": "error",
+    "@typescript-eslint/naming-convention": [
+      "error",
+      {
+        "filter": { "regex": "\\d+", "match": false },
+        "format": ["camelCase"],
+        "selector": "property"
+      }
+    ],
     "@typescript-eslint/no-base-to-string": "error",
     "@typescript-eslint/no-confusing-void-expression": [
       "error",
@@ -187,14 +204,7 @@
       "error",
       { "onlyInlineLambdas": false }
     ],
-    "@typescript-eslint/prefer-readonly-parameter-types": [
-      "error",
-      {
-        "checkParameterProperties": true,
-        "ignoreInferredTypes": false,
-        "treatMethodsAsReadonly": false
-      }
-    ],
+    "@typescript-eslint/prefer-readonly-parameter-types": "off",
     "@typescript-eslint/prefer-string-starts-ends-with": [
       "error",
       { "allowSingleElementEquality": "never" }

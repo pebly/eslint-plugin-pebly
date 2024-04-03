@@ -33,7 +33,7 @@
       "error",
       { "checkProperties": true, "onlyCamelCase": false }
     ],
-    "unicorn/no-null": ["error", { "checkStrictEquality": true }],
+    "unicorn/no-null": ["error", { "checkStrictEquality": false }],
     "unicorn/no-typeof-undefined": ["error", { "checkGlobalVariables": true }],
     "unicorn/no-unnecessary-polyfills": "error",
     "unicorn/no-useless-undefined": [
@@ -56,29 +56,10 @@
       { "emptyDefaultCase": "no-default-case", "minimumCases": 4 }
     ],
     "unicorn/prefer-ternary": ["error", "always"],
-    "unicorn/prevent-abbreviations": [
-      "error",
-      {
-        "allowList": {
-          "args": true,
-          "fn": true
-        },
-        "checkDefaultAndNamespaceImports": "internal",
-        "checkFilenames": false,
-        "checkVariables": true,
-        "checkProperties": true,
-        "checkShorthandImports": "internal",
-        "checkShorthandProperties": true,
-        "extendDefaultAllowList": true,
-        "extendDefaultReplacements": true,
-        "replacements": {
-          "func": { "fn": true }
-        }
-      }
-    ],
+    "unicorn/prevent-abbreviations": "off",
     "unicorn/relative-url-style": ["error", "never"],
     "unicorn/string-content": "off",
-    "unicorn/switch-case-braces": ["error", "always"],
+    "unicorn/switch-case-braces": ["error", "avoid"],
     "unicorn/template-indent": "error"
   }
 }

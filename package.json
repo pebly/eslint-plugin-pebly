@@ -12,7 +12,10 @@
     "typescript": "^5.4.2",
     "typescript-eslint": "^7.2.0"
   },
+  "name": "eslint-plugin-pebly",
   "scripts": {
+    "preinstall": "npx -y only-allow pnpm",
     "prepare": "node prepare.js"
-  }
+  },
+  "version": "0.1.0"
 }

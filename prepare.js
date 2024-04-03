@@ -41,7 +41,11 @@ const config = (name, path, plugin) => {
     const schema = configSchema(plugin, rulePlugin.meta.schema);
 
     // if (eslintRules[key] && !ext && plugin !== 'eslint') {
-    //   console.log(`[warn] similar core rule: ${ns} <-> ${key}`);
+    //   if (eslintRules[key].meta.deprecated) {
+    //     console.log(`[warn] similar core rule: ${ns} <-> ${key} (deprecated)`);
+    //   } else {
+    //     console.log(`[warn] similar core rule: ${ns} <-> ${key}`);
+    //   }
     // }
 
     if (ruleConfig) {
@@ -56,6 +60,10 @@ const config = (name, path, plugin) => {
       if (ext) {
         throw new Error(`core rule: ${ns} <-> ${ext}`);
       }
+
+      // if (rulePlugin.meta.type === 'layout') {
+      //   console.log(`[warn] layout rule: ${ns}`);
+      // }
 
       if (ruleConfig !== 'off' && !schema) {
         throw new Error(`unnecessary options: ${ns}`);
@@ -73,6 +81,8 @@ const config = (name, path, plugin) => {
         }
 
         rules[ns] = configEslint.rules[ext] ?? 'off';
+      } else if (rulePlugin.meta.type === 'layout') {
+        rules[ns] = 'off';
       } else {
         if (schema) {
           throw new Error(`undefined options: ${ns}`);
@@ -89,7 +99,23 @@ const config = (name, path, plugin) => {
     output.plugins ??= [plugin];
   }
 
+  if (plugin === '@typescript-eslint') {
+    const exMod = require(`./node_modules/${plugin}/${path}/configs/eslint-recommended.js`);
+
+    const exRules = Object.fromEntries(
+      Object.entries(exMod.overrides[0].rules).filter(
+        ([key, value]) => rules[key] === undefined && value === 'off'
+      )
+    );
+
+    output.overrides ??= [];
+
+    output.overrides.push({ files: '*.vue', rules: exRules });
+  }
+
   fs.writeFileSync(`${__dirname}/dist/${name}.json`, JSON.stringify(output));
+
+  // console.log(`[done] ${plugin}\n`);
 
   return output;
 };
