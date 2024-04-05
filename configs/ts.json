@@ -2,7 +2,7 @@
   "overrides": [
     {
       "extends": "plugin:@typescript-eslint/eslint-recommended",
-      "files": "*"
+      "files": "*.ts"
     },
     {
       "extends": "plugin:@typescript-eslint/disable-type-checked",

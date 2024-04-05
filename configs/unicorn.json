@@ -33,7 +33,7 @@
       "error",
       { "checkProperties": true, "onlyCamelCase": false }
     ],
-    "unicorn/no-null": ["error", { "checkStrictEquality": false }],
+    "unicorn/no-null": ["error", { "checkStrictEquality": true }],
     "unicorn/no-typeof-undefined": ["error", { "checkGlobalVariables": true }],
     "unicorn/no-unnecessary-polyfills": "error",
     "unicorn/no-useless-undefined": [

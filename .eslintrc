@@ -1,0 +1,19 @@
+{
+  "env": {
+    "node": true
+  },
+  "extends": [
+    "plugin:pebly/eslint",
+    "plugin:pebly/perfectionist",
+    "plugin:pebly/unicorn"
+  ],
+  "overrides": [
+    {
+      "files": "*.js"
+    }
+  ],
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "commonjs"
+  }
+}

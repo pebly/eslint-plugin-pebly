@@ -4,13 +4,13 @@
       "error",
       {
         "enforceForClassMembers": true,
-        "getWithoutSet": false,
+        "getWithoutSet": true,
         "setWithoutGet": true
       }
     ],
     "array-callback-return": [
       "error",
-      { "allowImplicit": true, "allowVoid": false, "checkForEach": false }
+      { "allowImplicit": false, "allowVoid": false, "checkForEach": false }
     ],
     "arrow-body-style": ["error", "as-needed"],
     "camelcase": [
@@ -48,7 +48,7 @@
     ],
     "func-names": ["error", "never", { "generators": "never" }],
     "func-style": ["error", "expression"],
-    "getter-return": ["error", { "allowImplicit": true }],
+    "getter-return": ["error", { "allowImplicit": false }],
     "grouped-accessor-pairs": ["error", "getBeforeSet"],
     "id-denylist": "off",
     "id-length": "off",
@@ -76,7 +76,7 @@
     ],
     "max-nested-callbacks": ["error", { "max": 4 }],
     "max-params": ["error", { "max": 8 }],
-    "max-statements": ["error", { "max": 32 }],
+    "max-statements": ["error", { "max": 64 }],
     "multiline-comment-style": ["error", "starred-block"],
     "new-cap": [
       "error",
@@ -144,6 +144,7 @@
     ],
     "no-ternary": "off",
     "no-undef": ["error", { "typeof": true }],
+    "no-undefined": "off",
     "no-underscore-dangle": [
       "error",
       {

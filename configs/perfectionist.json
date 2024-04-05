@@ -14,7 +14,7 @@
     "perfectionist/sort-object-types": ["error", { "type": "natural" }],
     "perfectionist/sort-objects": ["error", { "type": "natural" }],
     "perfectionist/sort-svelte-attributes": "off",
-    "perfectionist/sort-union-types": ["error", { "type": "natural" }],
-    "perfectionist/sort-vue-attributes": ["error", { "type": "natural" }]
+    "perfectionist/sort-union-types": "off",
+    "perfectionist/sort-vue-attributes": "off"
   }
 }

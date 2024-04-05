@@ -1,30 +1,7 @@
 {
   "rules": {
     "vue/attribute-hyphenation": ["error", "never"],
-    "vue/attributes-order": [
-      "error",
-      {
-        "alphabetical": true,
-        "order": [
-          [
-            "ATTR_DYNAMIC",
-            "ATTR_SHORTHAND_BOOL",
-            "ATTR_STATIC",
-            "CONDITIONALS",
-            "CONTENT",
-            "DEFINITION",
-            "EVENTS",
-            "GLOBAL",
-            "LIST_RENDERING",
-            "OTHER_DIRECTIVES",
-            "RENDER_MODIFIERS",
-            "SLOT",
-            "TWO_WAY_BINDING",
-            "UNIQUE"
-          ]
-        ]
-      }
-    ],
+    "vue/attributes-order": "off",
     "vue/block-lang": [
       "error",
       { "script": { "allowNoLang": false, "lang": "ts" } }
@@ -128,7 +105,7 @@
       { "allowReferrer": false, "enforceDynamicLinks": "never" }
     ],
     "vue/no-undef-components": "off",
-    "vue/no-undef-properties": "error",
+    "vue/no-undef-properties": "off",
     "vue/no-unsupported-features": "error",
     "vue/no-unused-components": [
       "error",

@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports = {
   configs: {
     eslint: require('./dist/eslint.json'),
